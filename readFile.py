@@ -2,7 +2,7 @@ import os
 import json
 import subprocess
 
-f = open("../creds.json", "r")
+f = open("./creds.json", "r")
 a = (f.read())
 f.close()
 
@@ -21,4 +21,4 @@ f = open('wpa_supplicant.conf', "w")
 f.write(toWriteToConfigFile)
 f.close()
 
-subprocess.call(['./copy.sh'])
+os.system('./copy.sh')
