@@ -20,7 +20,7 @@ router.post('/', function(req, res, next) {
 });
 
 function saveCreds(file, callback) {
-    fs.writeFile('./public/creds.json', JSON.stringify(file), callback);
+    fs.writeFile('./creds.json', JSON.stringify(file), {flag:'w'},callback);
 }
 
 module.exports = router;
