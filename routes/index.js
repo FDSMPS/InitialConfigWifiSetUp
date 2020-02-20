@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var fs = require('fs');
-let {PythonShell} = require('python-shell')
+let {PythonShell} = require('python-shell');
 
 
 
@@ -19,7 +19,7 @@ router.post('/', function(req, res, next) {
             return;
         }
 
-        PythonShell.run('readFile.py', null,function (err) {
+        PythonShell.run('/home/pi/InitialConfigWifiSetUp/readFile.py', null,function (err) {
             if(err){
                 res.send(err);
             }else{

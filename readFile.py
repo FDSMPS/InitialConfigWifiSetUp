@@ -21,4 +21,5 @@ f = open('wpa_supplicant.conf', "w")
 f.write(toWriteToConfigFile)
 f.close()
 
-os.system('./copy.sh')
+os.system('sudo cp wpa_supplicant.conf /boot/')
+os.system('sudo reboot')
