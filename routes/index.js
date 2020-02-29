@@ -1,3 +1,10 @@
+/*
+ To grab the data and save the WiFi credentials
+
+ @author Dorsa Nahid
+ @date 2020-1-31
+ Project: ECE 492 Group 1
+*/
 var express = require('express');
 var router = express.Router();
 var fs = require('fs');
@@ -11,7 +18,6 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
-    console.log(req.body);
     let data = {"cameraCode":req.body.cameraCode,"ssid":req.body.ssid,"pass":req.body.pass}
     saveCreds(data, function(err) {
         if (err) {
@@ -28,7 +34,9 @@ router.post('/', function(req, res, next) {
         });
     });
 });
-
+/*
+Saves the creds to a json file
+ */
 function saveCreds(file, callback) {
     fs.writeFile('./creds.json', JSON.stringify(file), {flag:'w'},callback);
 }
