@@ -1,4 +1,3 @@
-<!--/*-->
 <!--Brings all the files together-->
 
 <!--@author Dorsa Nahid-->
