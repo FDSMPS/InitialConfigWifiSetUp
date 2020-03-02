@@ -1,3 +1,9 @@
+<!--/*-->
+<!--Brings all the files together-->
+
+<!--@author Dorsa Nahid-->
+<!--@date 2020-1-31-->
+<!--Project: ECE 492 Group 1-->
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');

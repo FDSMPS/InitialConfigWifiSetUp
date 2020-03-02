@@ -2,6 +2,8 @@ import os
 import json
 import subprocess
 
+#To save the file with the SSID and Wi-Fi credentials
+
 f = open("./creds.json", "r")
 a = (f.read())
 f.close()
